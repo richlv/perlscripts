@@ -46,3 +46,14 @@ Example invocation and output:
 2020-01 4
 2020-02 2
 ```
+
+## mapillary_to_gpx.pl
+
+Extracts Mapillary (API v4) image coordinates and creates a GPX out of them.
+Can pass sequence or image IDs (one per sequence). In case of image IDs, their sequences will be looked up and all images from those sequences will be included.
+
+Exmple usage:
+
+```
+token='MLY|YOUR|TOKEN'; perl mapillary_to_gpx.pl --image 5652368314832935,5496261470483015,567554981851978,1352688202152043,817276516001059,893732341631081,1833835560326099,670881348042382 --token $token --tzoffset 2 --debug > reezekne2.gpx
+```
