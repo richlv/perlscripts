@@ -47,6 +47,26 @@ Example invocation and output:
 2020-02 2
 ```
 
+## expand_days.pl
+
+Reads a CSV file of format:
+
+```
+3333,EUR_GLOBAL_1,2021-07-30,2021-08-02
+4444,EUR_GLOBAL_2,2021-09-02,2021-09-03
+```
+
+Prints out all days between ranges along with an in-range index.
+
+```
+3333 EUR_GLOBAL_1 1 2021-07-30
+3333 EUR_GLOBAL_1 2 2021-07-31
+3333 EUR_GLOBAL_1 3 2021-08-01
+3333 EUR_GLOBAL_1 4 2021-08-02
+4444 EUR_GLOBAL_2 1 2021-09-02
+4444 EUR_GLOBAL_2 2 2021-09-03
+```
+
 ## mapillary_to_gpx.pl
 
 Extracts Mapillary (API v4) image coordinates and creates a GPX out of them.
